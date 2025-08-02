@@ -4,8 +4,9 @@ import RoomList from "./components/RoomList";
 import RoomDetail from "./components/RoomDetail";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import UserBooking from "./components/UserBooking";
-import BookRoom from "./components/BookRoom";
+import ReservationList from "./components/ReservationList";
+import BookRoom from "./components/ReservationRoom";
+import ReservationRoom from "./components/ReservationRoom";
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
           <Route path="/room/:id" element={<RoomDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/my-bookings" element={<UserBooking />} />
-          <Route path="/book-room/:id" element={<BookRoom />} />
+          <Route path="/reservation-list" element={<ReservationList />} />
+          <Route path="/reservation-room/:id" element={<ReservationRoom />} />
         </Routes>
       </div>
     </Router>
