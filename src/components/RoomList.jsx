@@ -39,15 +39,23 @@ export default function RoomList() {
             />
             <div className="p-4">
               <h2 className="text-xl font-semibold">{room.room_name}</h2>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-600 mt-2 mb-4">
                 Rp {room.rates.toLocaleString()}/night
               </p>
-              <a
-                href={`/book-room/${room.id}`}
-                className="mt-4 bg-blue-600 text-white px-4 py-Now2 rounded hover:bg-blue-700"
-              >
-                Book Now
-              </a>
+              <div className="flex items-center justify-between gap-x-4">
+                <a
+                  href={`/room/${room.id}`}
+                  className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-center"
+                >
+                  See Room Detail
+                </a>
+                <a
+                  href={`/reservation/${room.id}`}
+                  className="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-center"
+                >
+                  Book Now
+                </a>
+              </div>
             </div>
           </div>
         ))}
